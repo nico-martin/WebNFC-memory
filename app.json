@@ -1,0 +1,7 @@
+{
+  "title": "WebNFC Memory Game",
+  "short": "SPG",
+  "description": "A memory game based on Preact (React) using WebNFC",
+  "color": "#009d89",
+  "colorbkg": "#ffffff"
+}
