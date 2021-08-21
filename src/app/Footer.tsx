@@ -14,10 +14,7 @@ const Footer = ({ className = '' }: { className?: string }) => {
         <Icon icon="mdi/info" />
       </button>
       <span className={styles.version}>
-        <a
-          href="https://github.com/nico-martin/WebNFC-memory"
-          target="_blank"
-        >
+        <a href="https://github.com/nico-martin/WebNFC-memory" target="_blank">
           WebNCF Memory
         </a>{' '}
         v{pkg.version}
@@ -39,14 +36,15 @@ const Footer = ({ className = '' }: { className?: string }) => {
         <PortalBox close={() => setInfos(false)} title="WebNCF Memory">
           <div className={styles.info}>
             <p>
-              <b>WebNCF Memory</b> memory game based on Preact (React) using WebNFC by{' '}
+              <b>WebNCF Memory</b> is a memory game based on Preact (React)
+              using WebNFC by{' '}
               <a href="https://nico.dev" target="_blank">
                 Nico Martin
               </a>
               .
             </p>
             <p>
-              You can find more about this interface on{' '}
+              You can find more about this on{' '}
               <a
                 href="https://github.com/nico-martin/WebNFC-memory"
                 target="_blank"

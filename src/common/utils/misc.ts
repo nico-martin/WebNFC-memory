@@ -8,3 +8,14 @@ export const shuffleArray = <T>(a: Array<T>): Array<T> => {
   }
   return a;
 };
+
+export const sortObject = (object: {
+  [key: number]: number;
+}): Array<[number, number]> => {
+  const sortable = Object.entries(object).reduce(
+    (acc, [key, value]) => [...acc, [key, value]],
+    []
+  );
+
+  return sortable.sort((a, b) => b[1] - a[1]);
+};

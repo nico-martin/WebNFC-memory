@@ -8,23 +8,37 @@ const Card = ({
   card,
   className = '',
   viewCard,
+  loadingWidth,
 }: {
   card: CardI;
   className?: string;
   viewCard: (index: number) => void;
+  loadingWidth: number;
 }) => {
   return (
     <button
-      onClick={() => viewCard(card.index)}
+      onClick={() => (loadingWidth === 100 ? viewCard(card.index) : null)}
       disabled={card.foundBy !== null}
       className={cn(className, styles.root)}
+      style={{
+        backgroundImage:
+          card.isVisible || card.foundBy !== null
+            ? `url("${card.imageUrl}")`
+            : '',
+      }}
     >
       {card.foundBy !== null ? (
-        'found by ' + card.foundBy
-      ) : card.isVisible ? (
-        card.imageUrl
+        <span className={styles.finderIcon}>{card.foundBy}</span>
       ) : (
-        <Icon icon="mdi/nfc-tag" className={styles.tagIcon} />
+        !card.isVisible && (
+          <Icon icon="mdi/nfc-tag" className={styles.tagIcon} />
+        )
+      )}
+      {card.isVisible && loadingWidth !== 100 && !Boolean(card.foundBy) && (
+        <span
+          className={styles.loadingIndicator}
+          style={{ width: loadingWidth + '%' }}
+        />
       )}
     </button>
   );
