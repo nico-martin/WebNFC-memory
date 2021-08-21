@@ -1,0 +1,12 @@
+.root {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--c-border);
+  height: 100%;
+}
+
+.tagIcon {
+  color: var(--c-bkg);
+  font-size: 10vmin;
+  opacity: 0.5;
+}

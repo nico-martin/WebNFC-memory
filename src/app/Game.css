@@ -1,0 +1,25 @@
+.root {
+  position: fixed;
+  inset: 0;
+  bottom: calc(var(--spacing) + var(--spacing-half) + 1.6rem);
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  margin-bottom: var(--spacing);
+  justify-content: space-between;
+}
+
+.cardsOverview {
+  display: grid;
+  grid-gap: var(--spacing);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  height: 100%;
+}
+
+.card {
+}

@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  align-items: center;
+  font-size: 3vmin;
+  line-height: 1;
+}
+
+.isActive {
+  font-weight: bold;
+}
+
+.name {
+  margin-right: var(--spacing-half);
+  display: block;
+}
+
+.points {
+  display: block;
+}
+
+.root:last-child {
+  flex-direction: row-reverse;
+
+  .name {
+    margin-right: 0;
+  }
+
+  .points {
+    margin-right: var(--spacing-half);
+  }
+}
