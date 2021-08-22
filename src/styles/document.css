@@ -4,6 +4,7 @@
 
 body {
   background-color: var(--c-bkg);
+  transition: background-color 600ms;
 }
 
 body,

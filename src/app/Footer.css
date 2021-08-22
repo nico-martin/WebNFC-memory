@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: var(--spacing-half);
-  border-top: 1px solid var(--c-border);
+  border-top: 1px solid var(--c-p);
 }
 
 .button {
@@ -34,10 +34,10 @@
 
 .version {
   font-size: var(--fs-small);
-  color: var(--c-border-dark);
+  color: var(--c-p);
 
   a {
-    color: var(--c-border-dark);
+    color: var(--c-p);
     text-decoration: none;
   }
 }

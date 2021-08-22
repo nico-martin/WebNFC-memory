@@ -1,12 +1,13 @@
 .root {
-  display: flex;
-  align-items: center;
-  font-size: 3vmin;
+  font-size: 5vmin;
   line-height: 1;
 }
 
 .isActive {
   font-weight: bold;
+  transform: scale(1.4);
+  transform-origin: 0 0;
+  transition: transform 200ms;
 }
 
 .name {
@@ -16,16 +17,21 @@
 
 .points {
   display: block;
+  margin-top: 0.4em;
+  line-height: 1;
+  min-height: 1em;
 }
 
 .root:last-child {
-  flex-direction: row-reverse;
+  &.isActive {
+    transform-origin: 100% 0;
+  }
 
   .name {
     margin-right: 0;
   }
 
   .points {
-    margin-right: var(--spacing-half);
+    text-align: right;
   }
 }

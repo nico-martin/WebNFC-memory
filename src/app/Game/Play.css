@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  margin-bottom: var(--spacing-half);
+  justify-content: space-between;
+}
+
+.cardOverview {
+  padding: var(--spacing) 0;
+  display: grid;
+  grid-gap: var(--spacing);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: var(--c-border);
+}
